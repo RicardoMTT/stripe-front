@@ -1,13 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularStripe</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularStripe</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      const stripe = Stripe(
+        "pk_test_51ILWL9E1amG94aMa9CPNkrjJ0hB5urD3ePmyYNB8aRK5kBB7B8cYr3tGMA7GOmz4WFzGzq2p1mms86RNMx5is6BT00i4QcwuMv"
+      );
+      const elements = stripe.elements();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
